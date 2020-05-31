@@ -153,6 +153,265 @@
         flightPath3.setMap(map); 
 
         makermm(20.018087,84.453755,"Odisha");
+
+        // West Bengal to Amdabad
+
+        var flightPlanCoordinates4 = [
+        
+          {lat:  23.688128, lng: 86.797867 },
+          {lat:  23.989599, lng: 85.832146},
+          {lat:  24.009672, lng: 84.861508 },
+          {lat:  23.627750, lng: 84.696896},
+          {lat:  24.029742, lng: 83.807994},
+          {lat:  24.153437, lng: 82.802035},
+          {lat:  24.393798, lng: 82.209433},
+          {lat:  24.513808, lng: 80.899906},
+          {lat:  24.180166, lng: 80.041245},
+          {lat:  24.360442, lng: 79.253399},
+          {lat:  23.748478, lng: 78.749856},
+          {lat:  23.439729, lng: 77.747555},
+          {lat:  23.197595, lng: 77.582943},
+          {lat:  22.580201, lng: 77.010712},
+          {lat:  22.600488, lng: 75.913302},  // Indore
+          {lat:  22.661331, lng: 74.706150},
+          {lat:  22.701877, lng: 73.367310},
+          {lat:  22.924669, lng: 72.621071}
+
+              
+        ];
+        var flightPath4 = new google.maps.Polyline({
+          path: flightPlanCoordinates4,
+          geodesic: true,
+          strokeColor: '#FF0000',
+          strokeOpacity: 0.90,
+          strokeWeight: 4
+        });
+        flightPath4.setMap(map); 
+        makermm(22.924669, 72.621071,"Ahmedabad");
+
+
+        // Bihar to Punjab (Technically New Delhiu to punjab)
+        var flightPlanCoordinates5 = [
+        
+          {lat:28.616674, lng: 77.191228},
+          {lat:  29.152161, lng: 76.442593},
+          {lat:  29.356642, lng: 76.275509},
+          {lat:  29.929547, lng: 76.085291 },
+          {lat:  30.157793, lng: 75.767042 },
+          {lat:  30.537030, lng: 75.393923 },
+          {lat:  31.027832, lng: 75.624379 }
+          
+          
+              
+        ];
+        var flightPath5 = new google.maps.Polyline({
+          path: flightPlanCoordinates5,
+          geodesic: true,
+          strokeColor: '#FF0000',
+          strokeOpacity: 0.90,
+          strokeWeight: 4
+        });
+        flightPath5.setMap(map); 
+        makermm(31.027832, 75.624379,"Punjab");
+
+        // Village Circles :    
+             // •	Shani Shingnapur, Maharashtra 
+            var cityCircleOne = new google.maps.Circle({
+strokeColor: '#FF0000',
+strokeOpacity: 0.8,
+strokeWeight: 2,
+fillColor: '#FF0000',
+fillOpacity: 0.35,
+clickable : true,
+map: map,            
+center: {lat: 18.923608, lng:74.629017},
+radius: (60)  * 1000                       
+
+}) 
+
+             // Mendha Lekha, Maharashtra
+             var cityCircletwo = new google.maps.Circle({
+               strokeColor: '#FF0000',
+               strokeOpacity: 0.8,
+               strokeWeight: 2,
+               fillColor: '#FF0000',
+               fillOpacity: 0.35,
+               clickable : true,
+               map: map,            
+               center: {lat: 21.657428 , lng:79.438816},
+               radius: (90)  * 1000         
+               }) 
+
+               // Mendha Lekha, Maharashtra
+             var cityCircleThree = new google.maps.Circle({
+               strokeColor: '#FF0000',
+               strokeOpacity: 0.8,
+               strokeWeight: 2,
+               fillColor: '#FF0000',
+               fillOpacity: 0.35,
+               clickable : true,
+               map: map,            
+               center: {lat: 19.552888 , lng:74.654943 },
+               radius: (85)  * 1000         
+               }) 
+
+               //•	Dharnai, Bihar
+               var cityCircleFour = new google.maps.Circle({
+               strokeColor: '#FF0000',
+               strokeOpacity: 0.8,
+               strokeWeight: 2,
+               fillColor: '#FF0000',
+               fillOpacity: 0.35,
+               clickable : true,
+               map: map,            
+               center: {lat: 24.733528 , lng:84.962075 },
+               radius: (70)  * 1000         
+               }) 
+               // Odisha
+               var cityCircleFive = new google.maps.Circle({
+               strokeColor: '#FF0000',
+               strokeOpacity: 0.8,
+               strokeWeight: 2,
+               fillColor: '#FF0000',
+               fillOpacity: 0.35,
+               clickable : true,
+               map: map,            
+               center: {lat: 19.570142, lng: 84.703404 },
+               radius: (60)  * 1000  
+
+               }) 
+               //Gujrat 
+               var cityCircleSix = new google.maps.Circle({
+               strokeColor: '#FF0000',
+               strokeOpacity: 0.8,
+               strokeWeight: 2,
+               fillColor: '#FF0000',
+               fillOpacity: 0.35,
+               clickable : true,
+               map: map,            
+               center: {lat: 23.671358, lng: 73.104244 },
+               radius: (60)  * 1000         
+               }) 
+
+               //rajesthan
+               var cityCircleSeven = new google.maps.Circle({
+               strokeColor: '#FF0000',
+               strokeOpacity: 0.8,
+               strokeWeight: 2,
+               fillColor: '#FF0000',
+               fillOpacity: 0.35,
+               clickable : true,
+               map: map,            
+               center: {lat: 27.949121, lng: 75.214424 },
+               radius: (100)  * 1000         
+               }) 
+               //Kadbanwadi, Maharashtra
+               var cityCircleEight = new google.maps.Circle({
+               strokeColor: '#FF0000',
+               strokeOpacity: 0.8,
+               strokeWeight: 2,
+               fillColor: '#FF0000',
+               fillOpacity: 0.35,
+               clickable : true,
+               map: map,            
+               center: {lat: 18.097125, lng: 75.307086 },
+               radius: (100)  * 1000         
+               }) 
+
+               //Other Circles 
+               var cityCircleNine = new google.maps.Circle({
+               strokeColor: '#FF0000',
+               strokeOpacity: 0.8,
+               strokeWeight: 2,
+               fillColor: '#FF0000',
+               fillOpacity: 0.35,
+               clickable : true,
+               map: map,            
+               center: {lat: 25.852632, lng: 79.001788 },
+               radius: (60)  * 1000         
+               }) 
+
+               var cityCircleNine = new google.maps.Circle({
+               strokeColor: '#FF0000',
+               strokeOpacity: 0.8,
+               strokeWeight: 2,
+               fillColor: '#FF0000',
+               fillOpacity: 0.35,
+               clickable : true,
+               map: map,            
+               center: {lat: 28.084904, lng: 79.857382},
+               radius: (60)  * 1000         
+               })
+
+               var cityCircleTen = new google.maps.Circle({
+               strokeColor: '#FF0000',
+               strokeOpacity: 0.8,
+               strokeWeight: 2,
+               fillColor: '#FF0000',
+               fillOpacity: 0.35,
+               clickable : true,
+               map: map,            
+               center: {lat: 20.454463, lng: 80.867755},
+               radius: (60)  * 1000         
+               })
+
+               var cityCircleElevel = new google.maps.Circle({
+               strokeColor: '#FF0000',
+               strokeOpacity: 0.8,
+               strokeWeight: 2,
+               fillColor: '#FF0000',
+               fillOpacity: 0.35,
+               clickable : true,
+               map: map,            
+               center: {lat: 22.431340, lng: 75.662042 },
+               radius: (60)  * 1000         
+               })
+
+
+               var cityCircle12 = new google.maps.Circle({
+               strokeColor: '#FF0000',
+               strokeOpacity: 0.8,
+               strokeWeight: 2,
+               fillColor: '#FF0000',
+               fillOpacity: 0.35,
+               clickable : true,
+               map: map,            
+               center: {lat: 23.745126, lng: 78.757150 },
+               radius: (60)  * 1000         
+               })
+
+               var cityCircle13 = new google.maps.Circle({
+               strokeColor: '#FF0000',
+               strokeOpacity: 0.8,
+               strokeWeight: 2,
+               fillColor: '#FF0000',
+               fillOpacity: 0.35,
+               clickable : true,
+               map: map,            
+               center: {lat: 24.567108, lng: 81.353295 },
+               radius: (60)  * 1000         
+               })
+
+               var cityCircle14 = new google.maps.Circle({
+               strokeColor: '#FF0000',
+               strokeOpacity: 0.8,
+               strokeWeight: 2,
+               fillColor: '#FF0000',
+               fillOpacity: 0.35,
+               clickable : true,
+               map: map,            
+               center: {lat: 20.673905, lng: 77.192010 },
+               radius: (80)  * 1000         
+               })
+
+
+
+
+
+
+
+
+
         
 
 
