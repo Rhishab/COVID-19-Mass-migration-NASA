@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Mr musk  </title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSD0qzwd6nVIbyg7TTDVYUZBgTVwlN75k&callback=initMap">
+    </script>
+    <script> 
+    function initMap(){
+        var map = new google.maps.Map(document.getElementById('map'),{
+            zoom: 5,
+          center: {lat:22.133138, lng: 78.368019},
+          mapTypeId: 'terrain'
+        });  
+        
+         function makermm(positionOne,positionTwo,content) {        
+         var marker = new google.maps.Marker({
+                position: {lat: positionOne, lng: positionTwo},
+                map: map,
+                title: 'Uluru (Ayers Rock)'
+                });
+                
+                var infowindow = new google.maps.InfoWindow({
+                 content: content 
+                });
+                marker.addListener('click', function(){
+                             
+                  infowindow.open(map,marker);          
+                });            
+        };    
+      
+
+
+
+
+
+// Delhi : 
+            makermm(28.616674, 77.191228,"Delhi");
+            makermm(25.138654, 85.545577,"Bihar");
+
+
+
+
+        //Delhi to Bihaar 
+        var flightPlanCoordinates = [
+          {lat:28.616674, lng: 77.191228},
+          {lat: 28.766054, lng: 77.382882},
+          {lat: 28.515361, lng: 77.574776},
+          {lat: 28.375291, lng: 77.750362},
+          {lat: 28.000869, lng: 78.137949},
+          {lat: 27.453040, lng: 78.506849},
+          {lat: 26.837144, lng: 79.032923},
+          {lat: 26.208022, lng: 80.861941},
+          {lat: 25.324168, lng: 81.652077},
+          {lat: 25.671236, lng: 82.691365},
+          {lat: 25.254633, lng: 83.020588},
+          {lat: 25.272848, lng: 83.134916},
+          {lat: 24.991037, lng: 84.448167},
+          {lat: 25.103839, lng: 84.815799},
+          {lat: 25.168488, lng: 85.216354},
+          {lat: 25.138654, lng: 85.545577}
+        ];
+        infowindowroad = new google.maps.InfoWindow({
+                 content: "1024 Km" 
+                });
+        var flightPath = new google.maps.Polyline({
+          path: flightPlanCoordinates,
+          geodesic: true,
+          strokeColor: '#FF0000',
+          strokeOpacity: 0.90,
+          strokeWeight: 4
+        });
+        flightPath.addListener('click', function(){
+          infowindowroad.opne(map,flightPath)
+        })
+        flightPath.setMap(map);
+
+        // End of Delhi to Bihar
+
+        // West Bengal To Mumbai 
+
+        makermm(23.792048,88.090204,"West Bengal");
+        makermm(19.019928, 73.020778,"Mumbai");
+        var flightPlanCoordinates2 = [
+          {lat: 23.792048, lng: 88.090204 },
+          {lat: 23.624395, lng:87.071817},
+          {lat: 22.978624, lng: 86.523112},
+          {lat: 22.105999, lng: 86.896231},
+          // {lat: 21.956632, lng: 21.956632},
+          {lat: 21.956632, lng: 85.216583},
+          {lat: 21.183558, lng: 84.185017},
+          {lat: 21.241596, lng: 82.644031},
+          {lat: 21.251835, lng: 81.633594},
+          {lat: 20.988795, lng: 80.661758},
+          {lat: 21.070832, lng: 79.685063},
+          {lat: 21.081084, lng: 78.345954},
+          {lat: 20.814318, lng: 77.808223},
+          {lat: 20.427013, lng: 77.390402},
+          {lat: 20.176286, lng: 77.017283},
+          {lat: 20.021527, lng: 76.556566},
+          {lat: 19.804609, lng: 75.854224},
+          {lat: 19.763257, lng: 75.382337},
+          {lat: 19.556340, lng: 75.020192},
+          {lat: 19.155547, lng: 74.647072},
+          {lat: 18.871637, lng: 74.402669},
+          {lat: 18.774582, lng: 73.583135},
+          {lat: 18.958246, lng: 73.107590},
+          {lat: 19.019928, lng: 73.020778}
+        ];
+        var flightPath2 = new google.maps.Polyline({
+          path: flightPlanCoordinates2,
+          geodesic: true,
+          strokeColor: '#FF0000',
+          strokeOpacity: 0.90,
+          strokeWeight: 4
+        });
+        flightPath2.setMap(map); 
+        //End of West Bengal to mumbai
+
+        // Odisha to Mumbai (Joins nahpur and follows)
+        var flightPlanCoordinates3 = [
+          {lat:  20.018087, lng: 84.453755 },
+          {lat:  20.574511, lng: 84.333040 },
+          {lat:  20.821165, lng: 83.883224},
+          {lat:  21.262075, lng: 83.389390 },
+          {lat:  21.190388, lng: 82.412694}
+              
+        ];
+        var flightPath3 = new google.maps.Polyline({
+          path: flightPlanCoordinates3,
+          geodesic: true,
+          strokeColor: '#FF0000',
+          strokeOpacity: 0.90,
+          strokeWeight: 4
+        });
+        flightPath3.setMap(map); 
+
+        makermm(20.018087,84.453755,"Odisha");
+        
+
+
+
+
+
+
+        
+
+        
+        
+
+        
+     
+
+
+       }; 
+
+       
+       
+      //  listener() ///Solve this and // fucking delegate
+      //marker_create(27.626828,85.304033,"Bungamati", "Bungamati",27.714011,85.268287,27.698205,85.289735, 27.662581,85.342037 );
+
+       
+
+
+            //End
+            
+    
+        
+  
+                   
+
+    
+    
+
+    
+    </script>
+    
+  </body>
+</html>
+
+
